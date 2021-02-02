@@ -12,6 +12,7 @@ class App extends Component {
 
         this.state = {
             message: "",
+            count:'',
             bidders: {
                     "bids": [
                         {
@@ -99,16 +100,23 @@ class App extends Component {
                 this.setState({
                     bidders: this.props.data
                 })
+            console.log(data)
             }
+        setTimeout(
+            () => this.setState({
+                count: this.state.bidders.bids.length }),
+            2000
+        );
+
         }
 
 
+
     render() {
-        const count = this.state.bidders.bids.length
         return (
             <Container>
                 <Fragment >
-                    <CardView count={count}/>
+                    <CardView count={this.state.count}/>
                     <h3>Bidders </h3>
                     <BiddersTable bidders={this.state.bidders}/>
                 </Fragment>

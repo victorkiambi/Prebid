@@ -25,8 +25,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-    <script async src="https:/www.googletagservices.com/tag/js/gpt.js"></script>
-    <script async src="https:/acdn.adnxs.com/prebid/not-for-prod/prebid.js"></script>
+    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script async src="https://acdn.adnxs.com/prebid/not-for-prod/prebid.js"></script>
     <script>
       var div_1_sizes = [
         [300, 250],
@@ -71,8 +71,8 @@
           timeout: PREBID_TIMEOUT
         });
 
-        let params = pbjs.getBidResponses();
-          document.getElementById('root').setAttribute('data-details', ''+params)
+        let params = pbjs.getAllWinningBids();
+        document.getElementById('root').setAttribute('data-details', ''+params)
 
       });
 
