@@ -87,10 +87,10 @@ class App extends Component {
             }
         }
 
-
     }
     componentDidMount() {
-        if (Object.keys(this.props.data).length === 0){
+        const data = this.props.data
+        if (Object.keys(data).length === 0){
             this.setState({
                 message: "no bidders available"
             })
